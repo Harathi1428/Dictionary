@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.outer{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(90, 136, 152);
+  height: 100vh;
+
+}
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top img{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+}
+.main{
+  background-color: whitesmoke;
+  width:50%;
+  padding:10px;
+  border-radius: 2%;
+  margin-top: 20px;
+}
+ .outer h1{
+  font-family: 'Times New Roman', Times, serif;
+  background-image: linear-gradient(to right,rgb(14, 45, 55),rgb(5, 72, 94));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation:animate 1s linear infinite;
+}
+@keyframes animate{
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity:0.7;
+  }
+  100%{
+    opacity:0;
+  }
+}
+.box{
+  display: flex;
+  background-color: whitesmoke;
+  width:50%;
+  border-radius: 10px;
+  height:60px;
+  align-items: center;
+  justify-content: space-around;
+  padding:10px;
+}
+.box input{
+  height:40px;
+  width:90%;
+  border-radius:15px;
+  outline: none;
+  background-color:rgb(129, 177, 193);
+  text-align: center;
+  font-size: larger;
+}
+/* .box button{
+  height:40px;
+  border-radius:10px;
+  width:45%;
+  outline: none;
+  background-color:rgb(129, 177, 193);
+  text-align: center;
+  font-size: larger;
+} */
+.main h3{
+  color:rgb(84, 124, 138);
+  text-transform: capitalize;
+}
+.main h2{
+  text-transform: capitalize;
+}
+@media  screen and (max-width:768px) {
+  .main{
+    width:90%;
+    padding:5px;
+  }
+  .main p{
+    font-size: small;
+  }
+  .box{
+    padding:5px;
+  }
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
